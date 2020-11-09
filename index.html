@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+
+    //ESERCIZIO: Pari o dispari?
+    var pariodispari = prompt("Pari o Dispari?");//inizializzo variabile pariodispari, ciò che inserisco nel prompt sarà contenuto in questa variabile
+
+    while ((pariodispari != "pari") && (pariodispari != "dispari")) {//finchè pariodispari è diverso da "pari" e pariodispari è diverso da "dispari"
+      alert("No, devi scegliere tra pari o dispari");//allora apri un alert che dica "No, devi scegliere tra pari o dispari"
+      pariodispari = prompt("Pari o Dispari?");//e riapri il prompt per scegliere tra pari o dispari
+    };
+    if (pariodispari == "pari") {//se pariodispari è uguale a "pari"
+      alert("Hai scelto " + pariodispari);//allora apri un alert che dica "hai scelto " + (scelta dell'utente)
+    } else if (pariodispari == "dispari") {//se invece pariodispari è uguale a "dispari"
+      alert("Hai scelto " + pariodispari);//allora apri un alert che dica "hai scelto " + (scelta dell'utente)
+    };
+
+    var numeroscelto = parseInt(prompt("Inserisci il tuo numero"));//inizializzo variabile numeroscelto, ciò che inserisco nel prompt sarà contenuto in questa variabile (il numero che ho scelto)
+
+    alert("Ora sceglierò anche io un numero...")
+
+    var numeroPC = Math.floor(Math.random() * 10);//genero un numero random intero da 1 a 10 sotto la variabile numeroPC (è il numero che sceglie il PC)
+
+    alert("Ho scelto il numero " + numeroPC);
+
+    if ((numeroscelto + numeroPC) % 2 == 0) {//se la somma del numeroscelto + il numeroPC è pari
+      alert("La somma dei due numeri è pari");//alert "la somma è pari"
+    } else {//diversamente
+      alert("La somma dei due numeri è dispari");//alert "la somma è dispari"
+    };
+
+    if (((numeroscelto + numeroPC) % 2 == 0) && (pariodispari == "pari")) {//se la somma dei due numeri è pari e avevo scelto pari
+      alert("Complimenti, hai vinto!");//allora ho vinto
+    } else if (((numeroscelto + numeroPC) % 2 == 1) && (pariodispari == "dispari")) {//se invece la somma dei due numeri è dispari e avevo scelto dispari
+      alert("Complimenti, hai vinto!");//allora ho vinto
+    } else {//diversamente
+      alert("Ops, hai perso!");//ho perso
+    };
+
+
+
+
+    </script>
+  </body>
+</html>
